@@ -1,49 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/signin"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center"
-    android:background="#FAFAFA">
+    android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTextUsername"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="66dp"
-        android:layout_marginBottom="16dp"
-        android:hint="Nome de utilizador"
-        android:inputType="textPersonName" />
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background" />
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:layout_marginBottom="16dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:layout_marginBottom="24dp"
-        android:hint="Palavra-passe"
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/buttonSignIn"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Criar Conta" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:padding="32dp">
 
-    <!-- ✅ Botão para voltar ao Login -->
-    <Button
-        android:id="@+id/buttonVoltarLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Voltar ao Login"
-        android:layout_marginTop="12dp" />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:src="@drawable/Logo"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Logo" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Palavra-passe"
+            android:inputType="textPassword"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Criar Conta"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#00BFFF"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/buttonVoltarLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Já tem conta? Iniciar sessão"
+            android:backgroundTint="#00BFFF"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>
